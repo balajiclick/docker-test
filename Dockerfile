@@ -8,7 +8,7 @@ COPY . /home/travis/builds
 RUN chmod 777 entrypoint.sh
 RUN chmod 777 init.sh
 
-ENTRYPOINT [ "/home/travis/builds/init.sh" ]
+ENTRYPOINT [ "/sbin/init" ]
 
-CMD ["/home/travis/builds/entrypoint.sh"]
+CMD ["/bin/sh", "/home/travis/builds/entrypoint.sh"]
 
